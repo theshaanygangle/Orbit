@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "Chat_App_BE"
+    },
+    {
+      "path": "Chat_App_FE"
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "Cursor Dark Midnight"
+  }
+}
