@@ -1,20 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <button className="btn">Button</button>
-      <button className="btn btn-neutral">Neutral</button>
-      <button className="btn btn-primary">Primary</button>
-      <button className="btn btn-secondary">Secondary</button>
-      <button className="btn btn-accent">Accent</button>
-      <button className="btn btn-ghost">Ghost</button>
-      <button className="btn btn-link">Link</button>z
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="about" element={<h1>About</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
