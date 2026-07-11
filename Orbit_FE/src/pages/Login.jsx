@@ -80,7 +80,7 @@ const Login = () => {
         ) : (
           <>
             <Typography variant="h5" className="text-blue-600">
-              Register
+              Sign Up
             </Typography>
             <form className="w-96" action="">
               <TextField
@@ -94,7 +94,7 @@ const Login = () => {
               <TextField
                 required
                 fullWidth
-                label="Set User Name"
+                label="Bio"
                 margin="normal"
                 variant="outlined"
               ></TextField>
@@ -102,14 +102,14 @@ const Login = () => {
               <TextField
                 required
                 fullWidth
-                label="Set Password"
+                label="Username"
                 margin="normal"
                 variant="outlined"
               ></TextField>
               <TextField
                 required
                 fullWidth
-                label="ReEnter Password"
+                label="Password"
                 margin="normal"
                 variant="outlined"
               ></TextField>
