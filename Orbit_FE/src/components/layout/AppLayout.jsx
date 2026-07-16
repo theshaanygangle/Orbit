@@ -25,7 +25,7 @@ const AppLayout = () => (WrappedComponent) => {
           </Grid>
           <Grid size={{ xs: 4 }}>Third</Grid>
         </Grid>
-        <div>Footer</div>
+        <div>This is the footer </div>
       </>
     );
   };
