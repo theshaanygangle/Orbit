@@ -1,1 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
+@theme {
+    --font-display: "Space Mono", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.liquid-bg {
+    background:
+        radial-gradient(circle at 14% 10%, rgba(46, 163, 242, 0.28), transparent 26%),
+        radial-gradient(circle at 86% 16%, rgba(255, 111, 145, 0.2), transparent 24%),
+        linear-gradient(135deg, #eef3fb 0%, #dfe6f3 45%, #f7f8fb 100%);
+}
+
+.liquid-bg.is-dark {
+    background:
+        radial-gradient(circle at 15% 12%, rgba(46, 163, 242, 0.25), transparent 26%),
+        radial-gradient(circle at 82% 8%, rgba(142, 124, 255, 0.18), transparent 22%),
+        linear-gradient(135deg, #181b24 0%, #242838 48%, #191c26 100%);
+}
+
+.glass-shell,
+.glass-panel {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(28px) saturate(145%);
+    -webkit-backdrop-filter: blur(28px) saturate(145%);
+}
+
+.is-dark .glass-shell,
+.is-dark .glass-panel {
+    background: rgba(28, 31, 43, 0.58);
+}
+
+.glass-shell {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        0 24px 90px rgba(10, 14, 25, 0.24);
+}
+
+.glass-panel {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        0 16px 48px rgba(10, 14, 25, 0.12);
+}
+
+.corner-button,
+.glass-panel,
+.glass-shell {
+    position: relative;
+}
+
+.corner-button::before,
+.corner-button::after,
+.glass-panel::before,
+.glass-panel::after,
+.glass-shell::before,
+.glass-shell::after {
+    content: "+";
+    position: absolute;
+    z-index: 2;
+    color: currentColor;
+    font-size: 10px;
+    line-height: 1;
+    opacity: 0.36;
+    pointer-events: none;
+}
+
+.corner-button::before,
+.glass-panel::before,
+.glass-shell::before {
+    left: -4px;
+    top: -6px;
+}
+
+.corner-button::after,
+.glass-panel::after,
+.glass-shell::after {
+    bottom: -6px;
+    right: -4px;
+}

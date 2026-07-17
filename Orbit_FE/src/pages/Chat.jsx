@@ -1,12 +1,9 @@
-import React from "react";
 import AppLayout from "../components/layout/AppLayout";
+import MessageThread from "../components/layout/MessageThread";
+import { chatMessages } from "../data/mockChatData";
 
 const Chat = () => {
-  return (
-    <div>
-      <h1>Chat</h1>
-    </div>
-  );
+  return <MessageThread messages={chatMessages} />;
 };
 
-export default AppLayout()(Chat);
+export default AppLayout(Chat);

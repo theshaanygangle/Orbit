@@ -1,11 +1,14 @@
-import React from "react";
 import AppLayout from "../components/layout/AppLayout";
+import MessageThread from "../components/layout/MessageThread";
+import { groupMessages } from "../data/mockChatData";
+
 const Groups = () => {
   return (
-    <div>
-      <h1>Groups</h1>
-    </div>
+    <MessageThread
+      messages={groupMessages}
+      typingLabel="Meera is typing in Orbit Design Room..."
+    />
   );
 };
 
-export default AppLayout()(Groups);
+export default AppLayout(Groups, { profile: "group" });
